@@ -39,7 +39,7 @@ class UserStorage {
       console.error(err);
     } finally {
       if (conn) conn.end();
-      if (affectedRows === 1) return { success: true };
+      if (res.affectedRows === 1) return { success: true };
       else return { success: false };
     }
   }
